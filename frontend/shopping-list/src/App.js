@@ -1,12 +1,38 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
+import Main from './components/Main';
+import Account from './components/Account'
+import MyProducts from './components/MyProducts';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import PurchaseHistory from './components/PurchaseHistory';
+
 
 class App extends Component {
-  state = {
-    products: []
+  
+  render(){
+    return(
+      <div>
+        <Switch>
+          <Route path="/account">
+            <Account/>
+          </Route>
+          <Route path="/myproducts">
+            <MyProducts/>
+          </Route>
+          <Route path="/purchasehistory">
+            <PurchaseHistory/>
+          </Route>
+          <Route path="/">
+            <Main/>
+          </Route>
+        </Switch>
+      </div>
+      );
+    }
   }
-
+  
+  export default App;
+  
   // componentDidMount() {
   //   fetch('http://localhost:5000/product')
   //   .then(res => res.json())
@@ -15,13 +41,3 @@ class App extends Component {
   //   })
   //   .catch(console.log)
   // }
-
-  render(){
-    return(
-      // <p>{this.state.products.map(product => <p>{product.name}</p>)}</p>
-      <NavBar />
-    );
-  }
-}
-
-export default App;
