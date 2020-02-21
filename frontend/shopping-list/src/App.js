@@ -22,7 +22,7 @@ class App extends Component {
           <Route path="/purchasehistory">
             <PurchaseHistory/>
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Main/>
           </Route>
         </Switch>

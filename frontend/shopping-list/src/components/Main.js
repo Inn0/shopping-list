@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
-import { BrowserRouter } from 'react-router-dom';
+import ShoppingList from './ShoppingList';
 
 export default class Main extends Component {
 
@@ -8,7 +8,10 @@ export default class Main extends Component {
         return (
             <div>
                 <NavBar />
-                <h1>Main</h1>
+                
+                <div className="bodyContainer">
+                   <ShoppingList />
+                </div>
             </div>
         )
     }
