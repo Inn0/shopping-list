@@ -5,8 +5,8 @@ export default class ShoppingList extends Component {
     render() {
         return (
             <div className="shoppingListContainer">
-                <div className="shoppingListTitle">
-                    <p>test</p>
+                <div className="shoppingListHeader">
+                    <h1>Your list</h1>
                 </div>
                 <div className="shoppingListBody">
                 

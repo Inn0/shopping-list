@@ -51,6 +51,22 @@
     box-shadow: 0 4px 4px #BEBEBE;
 }
 
+.shoppingListHeader {
+    min-height: 60px;
+    max-height: 60px;
+    display: flex;
+    width: 100%;
+}
+
+#shoppingListTitle{}
+
+.shoppingListBody{
+    display: flex;
+    max-height: calc(100% - 60px);
+    min-height: calc(100% - 60px);
+    width: 100%;
+}
+
 .bodyContainer {
     width: 80%;
     height: calc(100vh - 110px);
